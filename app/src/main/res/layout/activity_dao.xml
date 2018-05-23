@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
 
     <LinearLayout
         android:id="@+id/ll_button"
@@ -53,10 +53,15 @@
             android:text="QUERY" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_result"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_size_20"
-        app:layout_constraintTop_toBottomOf="@id/ll_button" />
+        app:layout_constraintTop_toBottomOf="@id/ll_button">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
